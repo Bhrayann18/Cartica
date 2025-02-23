@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap" rel="stylesheet">
     <title>Cartica de Amor</title>
     <style>
         body {
@@ -13,20 +14,24 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Patrick Hand', cursive;
+            /* Fuente manuscrita */
             text-align: center;
-            color: white;
+            color: black;
             flex-direction: column;
             transition: background 1s;
         }
 
         .carta,
         .carta-texto {
-            background: rgba(255, 255, 255, 0.2);
+            background: #fdfdfd;
+            /* Fondo blanco tipo papel */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 1px), linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+            background-size: 100% 25px;
+            /* Líneas horizontales simulando cuaderno */
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(5px);
             max-width: 400px;
             margin-bottom: 20px;
             transition: opacity 1s, transform 1s;
@@ -66,8 +71,7 @@
         .spotify {
             position: fixed;
             bottom: 10px;
-            left: 50%;
-            transform: translateX(-50%);
+            left: 10px;
             background: rgba(0, 0, 0, 0.8);
             padding: 10px 20px;
             border-radius: 20px;
@@ -120,6 +124,17 @@
             display: flex;
             justify-content: space-between;
         }
+
+        .mensaje,
+        p {
+            font-size: 12px;
+            line-height: 1.6;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            /* Añadir sombra suave al texto */
+            margin-bottom: 15px;
+            font-family: 'Patrick Hand', cursive;
+            /* Fuente manuscrita */
+        }
     </style>
 </head>
 
@@ -133,17 +148,16 @@
     <div class="carta-texto" id="carta-texto">
         <div class="seccion-carta seccion-mostrar" id="seccion1">
             <p>Ole, tenía algo pendiente contigo… Nunca creas que no presto atención a los detalles, porque si hay algo
-                que
-                valoro, es cada pequeño gesto tuyo. Y tú hiciste algo que jamás había experimentado en mi vida: recibir
-                una
-                cartita de alguien tan especial. Pero lo más hermoso no fue la carta en sí, sino que quien me la hizo
+                que valoro, es cada pequeño gesto tuyo. Y tú hiciste algo que jamás había experimentado en mi vida:
+                recibir
+                una cartita de alguien tan especial. Pero lo más hermoso no fue la carta en sí, sino que quien me la
+                hizo
                 llegar… fuiste tú.</p>
             <p>Niña, te digo algo… Tú llegaste a mi vida sin aviso, sin permiso, como si el destino hubiera dicho:
                 "Muchacho, aquí hay una niña única, una niña que ha venido a tomar tu corazón con todo su amor. Una niña
-                que
-                ha llegado para enseñarte lo que es amar de verdad, para decirte ‘oye, se me comporta bien’, para
-                mirarte
-                con ternura y, al mismo tiempo, exigirte paciencia. Una niña que vino a apoyarte en todo, a llenarte de
+                que ha llegado para enseñarte lo que es amar de verdad, para decirte ‘oye, se me comporta bien’, para
+                mirarte con ternura y, al mismo tiempo, exigirte paciencia. Una niña que vino a apoyarte en todo, a
+                llenarte de
                 orgullo, a demostrarte que el amor es entrega, es comprensión y es compañía."</p>
         </div>
 
@@ -153,10 +167,9 @@
                 con más razón que nunca, sé que quiero compartir mi vida contigo.</p>
             <p>Sabes, a veces tengo mil cosas en la cabeza, me pierdo entre mis ocupaciones y preocupaciones, pero tú me
                 enseñaste que no importa qué tan ocupado esté, siempre habrá tiempo para ti. Porque contigo, no hay
-                excusas.
-                Porque tú siempre has estado ahí para mí, con paciencia, con ternura, con amor incondicional. Y eso,
-                niña
-                mía, es algo que valoro más de lo que puedes imaginar.</p>
+                excusas. Porque tú siempre has estado ahí para mí, con paciencia, con ternura, con amor incondicional. Y
+                eso,
+                niña mía, es algo que valoro más de lo que puedes imaginar.</p>
         </div>
 
         <div class="seccion-carta" id="seccion3">
@@ -169,8 +182,7 @@
             </p>
             <p>Hemos aprendido que el amor no es solo momentos felices. Es escucharnos, entendernos, apoyarnos incluso
                 cuando las cosas no son fáciles. Porque en vez de alejarnos, siempre encontramos la manera de elegirnos
-                una
-                y otra vez.</p>
+                una y otra vez.</p>
             <p>Oleeee, tú eres mi princesita. Y esos ojitos tuyos… son mi debilidad. Pero te prometo que nunca perderán
                 su
                 brillo, porque una de mis prioridades es cuidarte, valorarte, estar ahí para ti y amarte como mereces.
@@ -180,8 +192,7 @@
         <div class="seccion-carta" id="seccion4">
             <p>Jamás olvidaré esa noche y esa promesa que hicimos:
                 "Cuidarnos, no limitarnos a nada y amarnos."</p>
-            <p>Att:
-                Tu niño ❤️</p>
+            <p>Att: Tu niño ❤️</p>
             <p>PD: Ole, aquí tu niño aprovechó sus dotes de programador para hacerte esto con todo su amor. A veces seré
                 torpe, pero eso no me impide encontrar maneras de sorprenderte. Lo subí a un servidor, así que si en
                 algún momento se cae… ¡no me regañes! 😅 </p>
@@ -189,14 +200,11 @@
         </div>
 
         <div class="botones-nav">
-            <button class="boton" id="anterior" onclick="cambiarSeccion(-1)" disabled>Anterior</button>
-            <button class="boton" id="siguiente" onclick="cambiarSeccion(1)">Siguiente</button>
+            <button class="boton" id="anterior" onclick="cambiarSeccion(-1)" disabled>Devuelvase ole</button>
+            <button class="boton" id="siguiente" onclick="cambiarSeccion(1)">Siguiente ole</button>
         </div>
 
-        <img src="LosConsentidos.jpg" alt="Otra imagen de amor" class="imagen" style="width: 50%; max-width: 150px;">
-
     </div>
-
 
     <div class="spotify">
         <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg" alt="Spotify">
@@ -205,10 +213,9 @@
             <p>Reproduciendo: The Chainsmokers - Paris</p>
         </div>
     </div>
-    <!-- Música -->
+
     <audio id="loveSong">
         <source src="The Chainsmokers - Paris (Official Video).mp3" type="audio/mpeg">
-        Tu navegador no soporta audio HTML5.
     </audio>
 
     <script>
