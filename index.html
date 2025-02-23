@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartica de Amor</title>
+    <style>
+        body {
+            background: linear-gradient(to right, #ff758c, #ff7eb3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            color: white;
+            flex-direction: column;
+            transition: background 1s;
+        }
+
+        .carta,
+        .carta-texto {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
+            max-width: 400px;
+            margin-bottom: 20px;
+            transition: opacity 1s, transform 1s;
+        }
+
+        .carta {
+            opacity: 1;
+            transition: opacity 1s, transform 1s;
+        }
+
+        .mensaje {
+            font-size: 20px;
+        }
+
+        .boton {
+            background: #ff4e50;
+            border: none;
+            padding: 10px 20px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: 0.3s;
+        }
+
+        .boton:hover {
+            background: #ff1e2d;
+        }
+
+        .imagen {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+
+        .spotify {
+            position: fixed;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px 20px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            z-index: 1000;
+            color: white;
+            font-size: 14px;
+        }
+
+        .spotify img {
+            width: 40px;
+            animation: vibrar 0.3s infinite alternate ease-in-out;
+        }
+
+        @keyframes vibrar {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(2px);
+            }
+        }
+
+        .carta-texto {
+            opacity: 0;
+            transform: scale(0.8);
+            position: absolute;
+            transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+            visibility: hidden;
+        }
+
+        .mostrar {
+            opacity: 1 !important;
+            transform: scale(1) !important;
+            visibility: visible;
+        }
+
+        .seccion-carta {
+            display: none;
+        }
+
+        .seccion-mostrar {
+            display: block;
+        }
+
+        .botones-nav {
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="carta" id="carta">
+        <h2>Para ti mi niña... 💖</h2>
+        <img src="LaNiña.jpg" alt="Imagen de amor" class="imagen">
+        <button class="boton" onclick="mostrarTexto()">Ábrela, ole</button>
+    </div>
+
+    <div class="carta-texto" id="carta-texto">
+        <div class="seccion-carta seccion-mostrar" id="seccion1">
+            <p>Ole, tenía algo pendiente contigo… Nunca creas que no presto atención a los detalles, porque si hay algo
+                que
+                valoro, es cada pequeño gesto tuyo. Y tú hiciste algo que jamás había experimentado en mi vida: recibir
+                una
+                cartita de alguien tan especial. Pero lo más hermoso no fue la carta en sí, sino que quien me la hizo
+                llegar… fuiste tú.</p>
+            <p>Niña, te digo algo… Tú llegaste a mi vida sin aviso, sin permiso, como si el destino hubiera dicho:
+                "Muchacho, aquí hay una niña única, una niña que ha venido a tomar tu corazón con todo su amor. Una niña
+                que
+                ha llegado para enseñarte lo que es amar de verdad, para decirte ‘oye, se me comporta bien’, para
+                mirarte
+                con ternura y, al mismo tiempo, exigirte paciencia. Una niña que vino a apoyarte en todo, a llenarte de
+                orgullo, a demostrarte que el amor es entrega, es comprensión y es compañía."</p>
+        </div>
+
+        <div class="seccion-carta" id="seccion2">
+            <p>Desde el primer momento en que entraste en mi vida, supe que eras diferente. Supe que eras especial. Y
+                hoy,
+                con más razón que nunca, sé que quiero compartir mi vida contigo.</p>
+            <p>Sabes, a veces tengo mil cosas en la cabeza, me pierdo entre mis ocupaciones y preocupaciones, pero tú me
+                enseñaste que no importa qué tan ocupado esté, siempre habrá tiempo para ti. Porque contigo, no hay
+                excusas.
+                Porque tú siempre has estado ahí para mí, con paciencia, con ternura, con amor incondicional. Y eso,
+                niña
+                mía, es algo que valoro más de lo que puedes imaginar.</p>
+        </div>
+
+        <div class="seccion-carta" id="seccion3">
+            <p>Nos complementamos en algo hermoso: en la manera en que demostramos amor. No necesitas decirme con
+                palabras
+                cuánto me amas, porque tus acciones lo gritan a diario. No dudes nunca de mí. No dudes nunca de cuánto
+                te
+                amo. Porque cuando te miro, solo puedo pensar: qué mujer tan guapa, qué afortunado soy de tenerte a mi
+                lado.
+            </p>
+            <p>Hemos aprendido que el amor no es solo momentos felices. Es escucharnos, entendernos, apoyarnos incluso
+                cuando las cosas no son fáciles. Porque en vez de alejarnos, siempre encontramos la manera de elegirnos
+                una
+                y otra vez.</p>
+            <p>Oleeee, tú eres mi princesita. Y esos ojitos tuyos… son mi debilidad. Pero te prometo que nunca perderán
+                su
+                brillo, porque una de mis prioridades es cuidarte, valorarte, estar ahí para ti y amarte como mereces.
+            </p>
+        </div>
+
+        <div class="seccion-carta" id="seccion4">
+            <p>Jamás olvidaré esa noche y esa promesa que hicimos:
+                "Cuidarnos, no limitarnos a nada y amarnos."</p>
+            <p>Att:
+                Tu niño ❤️</p>
+            <p>PD: Ole, aquí tu niño aprovechó sus dotes de programador para hacerte esto con todo su amor. A veces seré
+                torpe, pero eso no me impide encontrar maneras de sorprenderte. Lo subí a un servidor, así que si en
+                algún momento se cae… ¡no me regañes! 😅 </p>
+            <p>"Te amooooo, no lo olvides." ❤️</p>
+        </div>
+
+        <div class="botones-nav">
+            <button class="boton" id="anterior" onclick="cambiarSeccion(-1)" disabled>Anterior</button>
+            <button class="boton" id="siguiente" onclick="cambiarSeccion(1)">Siguiente</button>
+        </div>
+
+        <img src="LosConsentidos.jpg" alt="Otra imagen de amor" class="imagen" style="width: 50%; max-width: 150px;">
+
+    </div>
+
+
+    <div class="spotify">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/84/Spotify_icon.svg" alt="Spotify">
+        <div>
+            <p><strong>9 Septiembre</strong></p>
+            <p>Reproduciendo: The Chainsmokers - Paris</p>
+        </div>
+    </div>
+    <!-- Música -->
+    <audio id="loveSong">
+        <source src="The Chainsmokers - Paris (Official Video).mp3" type="audio/mpeg">
+        Tu navegador no soporta audio HTML5.
+    </audio>
+
+    <script>
+        let seccionActual = 1;
+        const totalSecciones = 4;
+
+        function cambiarSeccion(direccion) {
+            document.getElementById(`seccion${seccionActual}`).classList.remove('seccion-mostrar');
+            seccionActual += direccion;
+            document.getElementById(`seccion${seccionActual}`).classList.add('seccion-mostrar');
+
+            // Habilitar/Deshabilitar botones según la sección actual
+            document.getElementById('anterior').disabled = seccionActual === 1;
+            document.getElementById('siguiente').disabled = seccionActual === totalSecciones;
+        }
+
+        function mostrarTexto() {
+            document.getElementById("carta").style.opacity = "0";
+            setTimeout(() => {
+                document.getElementById("carta").style.display = "none";
+                document.getElementById("carta-texto").classList.add("mostrar");
+            }, 1000);
+
+            let song = document.getElementById("loveSong");
+
+            // Asegurar que la música inicia correctamente
+            song.muted = false; // Quitar silencio antes de reproducir
+            song.volume = 0.3; // Ajustar el volumen si es necesario
+            song.play().then(() => {
+                console.log("Música reproduciéndose 🎶");
+            }).catch(error => {
+                console.log("Error al reproducir la música:", error);
+            });
+        }
+    </script>
+</body>
+
+</html>
